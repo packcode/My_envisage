@@ -1,0 +1,101 @@
+<script>
+
+    var current = 0;
+    var rotator_obj = null;
+
+    var images_array = new Array();
+    images_array[0] = "rotator_1";
+    images_array[1] = "rotator_2";
+    images_array[2] = "rotator_3";
+
+    var rotate_them = setInterval(function(){rotating()},4000);
+
+    function rotating(){
+
+        rotator_obj = document.getElementById(images_array[current]);
+
+        if(current != 0) {
+
+            var rotator_obj_pass = document.getElementById(images_array[current-1]);
+            rotator_obj_pass.style.left = "-320px";
+
+        }
+        else {
+
+            rotator_obj.style.left = "-320px";
+
+        }
+
+        var slideit = setInterval(function(){change_position(rotator_obj)},30);
+
+        current++;
+
+        if (current == images_array.length+1) {
+
+            var rotator_obj_passed = document.getElementById(images_array[current-2]);
+            rotator_obj_passed.style.left = "-320px";
+            current = 0;
+            rotating();
+
+        }
+
+    }
+
+    function change_position(rotator_obj, type) {
+
+        var intleft = parseInt(rotator_obj.style.left);
+
+        if (intleft != 0) {
+
+            rotator_obj.style.left = intleft + 32 + "px";
+
+        }
+        else if (intleft == 0) {
+
+            clearInterval(slideit);
+
+        }
+
+    }
+
+
+</script>
+
+<style>
+
+    #rotate_outer {
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 320px;
+        height: 240px;
+        margin-top: -120px;
+        margin-left: -160px;
+        overflow: hidden;
+
+    }
+
+    #rotate_outer img {
+
+        position: absolute;
+        top: 0px;
+        left: 0px;
+
+    }
+
+</style>
+
+<html>
+<head>
+</head>
+<body onload="rotating();">
+
+    <div id="rotate_outer">
+        <img src="0.jpg" id="rotator_1"  style="left: -320px;" />
+        <img src="1.jpg" id="rotator_2"  style="left: -320px;" />
+        <img src="2.jpg" id="rotator_3"  style="left: -320px;" />
+    </div>
+
+</body>
+</html>

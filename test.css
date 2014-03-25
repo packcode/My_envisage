@@ -1,0 +1,36 @@
+.e{
+    float:left;
+    clear:both;
+}
+.background{
+    position:fixed;
+    top:0;left:0;
+    width:100%;height:100%;
+    display:none;
+    z-index:-1;
+}
+.e:hover>.background,.initial.background{
+    display:block;
+}
+.initial.background:hover{
+    display:block!important;
+}
+.background:hover{
+    display:none!important;
+}
+#bg0{background-image:url('bg.jpg');
+    /*background: -moz-linear-gradient(left, #FF0000 0%, #FF9900 10%, #FFFF00 16.666%, #CCFF00 20%, #32FF00 30%, #00FF00 33.333%, #00FF65 40%, #00FFFF 50%, #00FFFF 50%, #0065FF 60%, #0000FF 66.666%, #3300FF 70%, #CB00FF 80%, #FF00FF 83.333%, #FF0098 90%, #FF0004 100%);*/
+
+}
+
+#bg1{background-image:url('3.jpg');
+   /* background: -moz-linear-gradient(left center, #FF0000, #000000) repeat scroll 0 0 transparent*/
+}
+#bg2{background-image:url('1.jpg');
+   /* background: -moz-linear-gradient(left center, #00FF00, #000000) repeat scroll 0 0 transparent*/
+}
+#bg3{
+    background: -moz-linear-gradient(left center, #0000FF, #000000) repeat scroll 0 0 transparent
+}
+
+

@@ -1,0 +1,34 @@
+@media (max-width: 480px)
+.size{
+
+width:325px;
+height:85px;
+
+}
+
+#iiclogo
+{
+
+    height: 80px;
+    width: 93px;
+    position: absolute;
+    left: 3px;
+    top: 70px;
+}
+
+#dulogo
+{
+ 
+    height: 116px;
+    width: 166px;
+    position: absolute;
+    right: -36px;
+    top: 70px;
+}
+#eventlogo {
+    height: 94px;
+    width: 241px;
+   
+
+
+}

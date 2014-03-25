@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Sample</title>
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <style>
+        body { 
+            background: #ccc;
+            transition:0.5s;
+        }
+    </style>
+    </head>
+<body>
+    <script type="text/javascript">
+    
+
+var width = screen.width;
+var height = screen.height;
+
+
+            $(document).ready(function () {
+                $("#div-1").hover(
+                  function () {
+                      $('body').css({'background-image':'url(11.jpg)','background-size':'1400px 800px','background-repeat':'no-repeat'});
+                  }, 
+                  function () {
+                      $('body').css("background", "#ccc");
+                  }
+                );
+
+                $("#div-2").hover(
+                  function () {
+                      $('body').css("background", "red");
+                  }, 
+                  function () {
+                      $('body').css("background", "#ccc");
+                  }
+                );
+
+                $("#div-3").hover(
+                  function () {
+                      $('body').css("background", "yellow");
+                  }, 
+                  function () {
+                      $('body').css("background", "#ccc");
+                  }
+                );
+            });aq	
+        </script>
+
+    <a id="div-1" href="#"> Orange</a>
+    <a id="div-2" href="#">Red</a>
+    <a id="div-3" href="#">Yellow</a>
+</body>
+</html>
